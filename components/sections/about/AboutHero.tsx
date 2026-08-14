@@ -12,9 +12,9 @@ const rise = {
 
 export default function AboutHero() {
   return (
-    <section className="relative flex min-h-[calc(100svh-72px)] items-center border-b border-[#0F4C45]/10 py-10 lg:py-6">
+    <section className="relative flex min-h-[calc(100svh-72px)] items-center border-b border-[#0F4C45]/10 py-8 sm:py-10 lg:py-6">
       <div className="absolute left-0 top-[17%] h-52 w-px bg-[#C8A96A]" />
-      <div className="mx-auto grid w-full max-w-[1440px] items-center gap-12 px-6 sm:px-10 lg:grid-cols-[0.93fr_1.07fr] lg:gap-12 lg:px-16 xl:gap-16 xl:px-24">
+      <div className="mx-auto grid w-full max-w-[1440px] items-center gap-10 px-4 sm:gap-12 sm:px-10 lg:grid-cols-[0.93fr_1.07fr] lg:gap-12 lg:px-16 xl:gap-16 xl:px-24">
         <motion.div
           initial="hidden"
           animate="visible"
@@ -31,11 +31,11 @@ export default function AboutHero() {
           <motion.p variants={rise} transition={{ duration: 0.7, ease: "easeOut" }} className="mt-7 max-w-xl text-base leading-7 text-[#5F6368] lg:text-lg lg:leading-8">
             Mannat is a considered place for ambitious people to do their most meaningful work—calm, connected, and made for momentum.
           </motion.p>
-          <motion.div variants={rise} transition={{ duration: 0.7, ease: "easeOut" }} className="mt-9 flex flex-wrap gap-3 sm:mt-10">
-            <Link href="/contact" className="inline-flex items-center gap-3 bg-[#0F4C45] px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#F8F7F2] transition hover:bg-[#1A1A1A]">
+          <motion.div variants={rise} transition={{ duration: 0.7, ease: "easeOut" }} className="mt-9 flex flex-col gap-3 min-[390px]:flex-row sm:mt-10">
+            <Link href="/contact" className="inline-flex min-h-11 items-center justify-center gap-3 bg-[#0F4C45] px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#F8F7F2] transition hover:bg-[#1A1A1A]">
               Book a visit <ArrowUpRight size={15} strokeWidth={1.7} />
             </Link>
-            <Link href="#philosophy" className="inline-flex items-center border border-[#0F4C45]/30 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#0F4C45] transition hover:border-[#0F4C45] hover:bg-[#0F4C45]/5">
+            <Link href="#philosophy" className="inline-flex min-h-11 items-center justify-center border border-[#0F4C45]/30 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.15em] text-[#0F4C45] transition hover:border-[#0F4C45] hover:bg-[#0F4C45]/5">
               Our philosophy
             </Link>
           </motion.div>

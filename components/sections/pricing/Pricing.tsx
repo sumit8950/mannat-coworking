@@ -135,7 +135,7 @@ export default function Pricing() {
 
           <motion.h1
             variants={fadeUp}
-            className="mx-auto mt-3 max-w-7xl whitespace-nowrap font-serif text-[clamp(2.4rem,4.7vw,5rem)] leading-none tracking-[-0.055em]"
+            className="mx-auto mt-3 max-w-5xl font-serif text-[clamp(2.35rem,10vw,5rem)] leading-[0.94] tracking-[-0.055em] sm:text-[clamp(2.4rem,4.7vw,5rem)] sm:leading-none"
           >
             Work your way,{" "}
             <span className="italic text-[#0F4C45]">
@@ -153,13 +153,13 @@ export default function Pricing() {
       </section>
 
       {/* PRICING CARDS */}
-      <section className="mx-auto max-w-6xl px-6 pb-5 pt-1 sm:px-8">
+      <section className="mx-auto max-w-6xl px-4 pb-5 pt-1 sm:px-8">
         <motion.div
           variants={cardContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
-          className="grid gap-4 lg:grid-cols-2"
+          className="grid gap-4 md:grid-cols-2"
         >
           {plans.map((plan) => (
             <motion.article
@@ -171,7 +171,7 @@ export default function Pricing() {
                   duration: 0.3,
                 },
               }}
-              className={`group rounded-[24px] border px-6 py-5 transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(15,76,69,0.10)] ${
+              className={`group rounded-[24px] border px-5 py-5 transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(15,76,69,0.10)] sm:px-6 ${
                 plan.dark
                   ? "border-[#0F4C45] bg-[#0F4C45] text-[#F8F6F1]"
                   : "border-[#0F4C45]/[0.12] bg-[#FBFAF6]"
@@ -319,14 +319,14 @@ export default function Pricing() {
         transition={{
           duration: 0.7,
         }}
-        className="mx-auto max-w-6xl px-6 pb-6 pt-2 sm:px-8"
+        className="mx-auto max-w-6xl px-4 pb-6 pt-2 sm:px-8"
       >
         <motion.div
           whileHover={{
             y: -2,
             transition: { duration: 0.25 },
           }}
-          className="flex items-center justify-between gap-6 rounded-[24px] border border-[#C8A96A]/60 bg-[#C8A96A]/[0.07] px-6 py-4"
+          className="flex flex-col items-start justify-between gap-5 rounded-[24px] border border-[#C8A96A]/60 bg-[#C8A96A]/[0.07] px-5 py-5 sm:px-6 md:flex-row md:items-center"
         >
 
           <div>
@@ -344,25 +344,15 @@ export default function Pricing() {
             </p>
           </div>
 
-          <motion.button
-            whileHover={{
-              scale: 1.03,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
-            className="shrink-0 rounded-xl bg-[#0F4C45] px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#F8F6F1] transition-colors duration-300 hover:bg-[#1A1A1A]"
-          >
-            <Link href="/contact">
-  <motion.span
-    whileHover={{ scale: 1.03 }}
-    whileTap={{ scale: 0.97 }}
-    className="inline-flex shrink-0 rounded-xl bg-[#0F4C45] px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#F8F6F1] transition-colors duration-300 hover:bg-[#1A1A1A]"
-  >
-    Contact Us
-  </motion.span>
-</Link>
-          </motion.button>
+          <Link href="/contact" className="w-full md:w-auto">
+            <motion.span
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-[#0F4C45] px-5 py-3 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#F8F6F1] transition-colors duration-300 hover:bg-[#1A1A1A] md:w-auto"
+            >
+              Contact Us
+            </motion.span>
+          </Link>
 
         </motion.div>
       </motion.section>

@@ -76,7 +76,7 @@ export default function HomeAmenities() {
   return (
     <section
   id="amenities"
-  className="relative scroll-mt-20 overflow-hidden bg-[#0F4C45] px-6 py-20 text-[#F8F6F1] sm:px-10 lg:px-12 lg:py-24"
+  className="relative scroll-mt-20 overflow-hidden bg-[#0F4C45] px-4 py-8 text-[#F8F6F1] sm:px-10 sm:py-10 lg:px-12 lg:py-12"
 >
 
       {/* BACKGROUND DETAILS */}
@@ -91,26 +91,23 @@ export default function HomeAmenities() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.7 }}
-          className="mb-11 max-w-2xl"
+          className="mx-auto mb-11 max-w-2xl text-center"
         >
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center gap-4">
             <span className="h-px w-10 bg-[#C8A96A]" />
 
-            <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C8A96A]">
+            <p className="text-center text-[10px] font-semibold uppercase tracking-[0.3em] text-[#C8A96A]">
               The Mannat Standard
             </p>
           </div>
 
-          <h2 className="mt-5 font-serif text-[clamp(2.8rem,5vw,5rem)] leading-[0.92] tracking-[-0.055em]">
-            Everything you need to{" "}
-            <span className="italic text-[#C8A96A]">
-              work better.
-            </span>
-          </h2>
+             <h2 className="mt-4 text-center font-serif text-[clamp(2rem,3.6vw,4rem)] leading-none tracking-[-0.055em]">
+              Everything you need to{" "}
+              <span className="italic text-[#C8A96A]">work better.</span>
+             </h2>
 
-          <p className="mt-5 max-w-xl text-sm leading-6 text-[#F8F6F1]/70">
-            From seamless connectivity to everyday comforts, every detail is
-            designed to make your workday effortless.
+          <p className="mx-auto mt-4 max-w-2xl text-center text-sm leading-6 text-[#F8F6F1]/70">
+             From seamless connectivity to everyday comforts, every detail is designed to make your workday effortless.
           </p>
         </motion.div>
 
@@ -120,7 +117,7 @@ export default function HomeAmenities() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 gap-px overflow-hidden rounded-[24px] border border-[#F8F6F1]/15 bg-[#F8F6F1]/15 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-px overflow-hidden rounded-[24px] border border-[#F8F6F1]/15 bg-[#F8F6F1]/15 min-[390px]:grid-cols-2 lg:grid-cols-3"
         >
           {amenities.map((amenity) => {
             const Icon = amenity.icon;
@@ -133,7 +130,7 @@ export default function HomeAmenities() {
                   backgroundColor: "rgba(248,246,241,0.08)",
                   transition: { duration: 0.3 },
                 }}
-                className="group relative overflow-hidden bg-[#0F4C45] px-6 py-7 transition-colors duration-500"
+                className="group relative overflow-hidden bg-[#0F4C45] px-5 py-6 transition-colors duration-500 sm:px-6 sm:py-7"
               >
 
                 {/* HOVER GREEN/GOLD GLOW */}

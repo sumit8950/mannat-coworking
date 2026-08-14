@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function FinalCTA() {
   return (
-    <section className="mx-auto max-w-[1440px] px-6 py-28 text-center sm:px-10 lg:px-16 lg:py-36 xl:px-24">
+    <section className="mx-auto max-w-[1440px] px-4 py-20 text-center sm:px-10 sm:py-28 lg:px-16 lg:py-36 xl:px-24">
       <motion.div initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.4 }} transition={{ duration: 0.75 }}>
         <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#C8A96A]">Come see the difference</p>
         <h2 className="mx-auto mt-5 max-w-3xl font-serif text-[clamp(3rem,5.5vw,6rem)] leading-[0.92] tracking-[-0.05em]">Your next chapter has room to begin.</h2>

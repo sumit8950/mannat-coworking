@@ -64,7 +64,7 @@ const card = {
 
 export default function WorkspaceOptions() {
   return (
-    <section className="overflow-hidden bg-[#F8F6F1] px-6 py-20 sm:px-10 lg:px-12 lg:py-24">
+    <section className="overflow-hidden bg-[#F8F6F1] px-4 py-6 sm:px-10 sm:py-10 lg:px-12 lg:py-12">
       <div className="mx-auto max-w-7xl">
 
         {/* SECTION INTRO */}
@@ -102,7 +102,7 @@ export default function WorkspaceOptions() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+          className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4"
         >
           {workspaces.map((workspace) => {
             const Icon = workspace.icon;

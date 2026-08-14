@@ -9,7 +9,7 @@ const rise = {
 
 export default function ContactHero() {
   return (
-    <section className="relative overflow-hidden pt-14 pb-4 sm:pt-16 sm:pb-6">
+    <section className="relative overflow-hidden px-4 pb-4 pt-12 sm:px-0 sm:pb-6 sm:pt-16">
       {/* Background */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_8%_14%,rgba(200,169,106,0.07),transparent_24%),radial-gradient(circle_at_92%_88%,rgba(15,76,69,0.055),transparent_28%)]" />
 
@@ -20,14 +20,14 @@ export default function ContactHero() {
           staggerChildren: 0.1,
           delayChildren: 0.05,
         }}
-        className="relative mx-auto max-w-7xl px-6 text-center sm:px-10"
+          className="relative mx-auto max-w-7xl text-center sm:px-10"
       >
         {/* Label */}
         <motion.div
           variants={rise}
           transition={{ duration: 0.55, ease: "easeOut" }}
         >
-          <p className="text-[10px] font-semibold uppercase tracking-[0.32em] text-[#0F4C45]">
+          <p className="text-[9px] font-semibold uppercase tracking-[0.2em] text-[#0F4C45] sm:text-[10px] sm:tracking-[0.32em]">
             CONTACT MANNAT CO-WORKING
           </p>
 

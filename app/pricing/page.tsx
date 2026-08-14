@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import Pricing from "@/components/sections/pricing/Pricing";
 
@@ -12,6 +13,7 @@ export default function PricingPage() {
     <>
       <Navbar />
       <Pricing />
+      <Footer />
     </>
   );
 }
