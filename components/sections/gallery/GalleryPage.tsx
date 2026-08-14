@@ -116,7 +116,7 @@ export default function GalleryPage() {
             The Mannat Experience
           </p>
 
-          <h1 className="mx-auto mt-4 whitespace-nowrap font-serif text-[clamp(2.8rem,6vw,5.8rem)] leading-[0.92] tracking-[-0.06em] text-[#1A1A1A]">
+          <h1 className="mx-auto mt-4 font-serif text-[clamp(2.8rem,6vw,5.8rem)] leading-[0.92] tracking-[-0.06em] text-[#1A1A1A]">
             Spaces designed to{" "}
             <span className="italic text-[#0F4C45]">inspire.</span>
           </h1>
@@ -213,7 +213,7 @@ function GalleryGroup({
             {eyebrow}
           </p>
 
-          <h2 className="mt-2 whitespace-nowrap font-serif text-[clamp(2rem,4vw,3.8rem)] leading-none tracking-[-0.05em]">
+          <h2 className="mt-2 font-serif text-[clamp(2rem,4vw,3.8rem)] leading-none tracking-[-0.05em]">
             {title}
           </h2>
 

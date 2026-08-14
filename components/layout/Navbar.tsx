@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#E7E4DB] bg-[#F8F7F2]/95 backdrop-blur-md">
-      <nav className="mx-auto grid h-[72px] max-w-[1280px] grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-3 px-4 sm:px-6 lg:px-10">
+      <nav className="mx-auto flex h-[72px] max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-6 lg:px-10 xl:grid xl:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
         
         {/* LOGO */}
         <Link

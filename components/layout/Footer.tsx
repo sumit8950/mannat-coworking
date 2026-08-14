@@ -23,12 +23,12 @@ const socialLinks = [
 ];
 
 const linkClassName =
-  "inline-flex min-h-11 items-center text-sm text-[#0F4C45]/70 transition-colors duration-200 hover:text-[#C8A96A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A96A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8F6F1]";
+  "inline-flex min-h-11 break-words items-center text-sm text-[#0F4C45]/70 transition-colors duration-200 hover:text-[#C8A96A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A96A] focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8F6F1]";
 
 export default function Footer() {
   return (
     <footer className="mt-auto border-t border-[#0F4C45]/10 bg-[#F8F6F1] text-[#0F4C45]">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:px-10 sm:py-14 lg:grid-cols-[1.6fr_repeat(4,1fr)] lg:gap-8 lg:px-12">
+      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:grid-cols-2 sm:px-10 sm:py-14 xl:grid-cols-[1.6fr_repeat(4,1fr)] xl:gap-8 xl:px-12">
         <div className="max-w-sm">
           <Link href="/" className="inline-flex rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0F4C45] focus-visible:ring-offset-4">
             <Image
