@@ -8,27 +8,27 @@ import { useEffect, useState } from "react";
 const images = [
   {
     src: "/images/about/about-image.jpg",
-    alt: "Mannat Coworking Workspace",
+    alt: "Modern private office interior with desk seating and city views",
   },
   {
     src: "/images/about/about-image.jpg",
-    alt: "Mannat Coworking Office",
+    alt: "Modern private office interior with desk seating and city views",
   },
   {
     src: "/images/about/about-image.jpg",
-    alt: "Mannat Coworking Meeting Space",
+    alt: "Modern private office interior with desk seating and city views",
   },
   {
     src: "/images/about/about-image.jpg",
-    alt: "Mannat Coworking Workstation",
+    alt: "Modern private office interior with desk seating and city views",
   },
   {
     src: "/images/about/about-image.jpg",
-    alt: "Mannat Coworking Interior",
+    alt: "Modern private office interior with desk seating and city views",
   },
   {
     src: "/images/about/about-image.jpg",
-    alt: "Mannat Coworking Community Space",
+    alt: "Modern private office interior with desk seating and city views",
   },
 ];
 

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { createPageMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | Mannat Coworking",
-  description: "Terms and conditions for Mannat Coworking.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Terms & Conditions",
+  description:
+    "Read the terms and conditions for using the Mannat Coworking website and arranging a workspace visit in Sonipat.",
+  path: "/terms-and-conditions",
+});
 
 export default function TermsAndConditionsPage() {
   return (

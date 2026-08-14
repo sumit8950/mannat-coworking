@@ -11,6 +11,7 @@ const galleryItems = [
     title: "Private Cabins",
     description:
       "Focused spaces for uninterrupted work, privacy, and productivity.",
+    alt: "Private office cabin with a desk, plant, and natural light",
     src: "/images/gallery/private-cabins.png",
     className: "md:col-span-7 md:row-span-2",
   },
@@ -19,6 +20,7 @@ const galleryItems = [
     title: "Meeting Rooms",
     description:
       "Professional spaces designed for productive conversations and team meetings.",
+    alt: "Meeting room designed for focused team conversations",
     src: "/images/gallery/meeting-rooms.png",
     className: "md:col-span-5",
   },
@@ -27,6 +29,7 @@ const galleryItems = [
     title: "Modern Workstations",
     description:
       "Thoughtfully designed workspaces that keep everyday work comfortable and focused.",
+    alt: "Modern workstation area for focused individual work",
     src: "/images/gallery/workstations.png",
     className: "md:col-span-5",
   },
@@ -35,6 +38,7 @@ const galleryItems = [
     title: "Collaborative Spaces",
     description:
       "Open environments built for ideas, conversation, and meaningful collaboration.",
+    alt: "Collaborative workspace with comfortable seating for team discussions",
     src: "/images/gallery/collaborative-spaces.png",
     className: "md:col-span-5",
   },
@@ -43,6 +47,7 @@ const galleryItems = [
     title: "Lounge & Common Areas",
     description:
       "Relaxed spaces to recharge, connect, and take a break between work.",
+    alt: "Lounge and common area for relaxing between work sessions",
     src: "/images/gallery/lounge-common-areas.png",
     className: "md:col-span-7",
   },
@@ -51,6 +56,7 @@ const galleryItems = [
     title: "The Mannat Experience",
     description:
       "A refined coworking environment where comfort, design, and productivity come together.",
+    alt: "Refined coworking interior with comfortable workspace seating",
     src: "/images/gallery/coworking-environment.png",
     className: "md:col-span-12",
   },
@@ -298,7 +304,7 @@ function GalleryTile({
     >
       <Image
         src={item.src}
-        alt={item.title}
+        alt={item.alt}
         fill
         sizes={
           index === 0
@@ -368,7 +374,7 @@ function Lightbox({
           >
             <Image
               src={item.src}
-              alt={item.title}
+              alt={item.alt}
               fill
               sizes="100vw"
               className="object-contain"

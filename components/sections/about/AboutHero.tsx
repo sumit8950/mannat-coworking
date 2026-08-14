@@ -43,7 +43,7 @@ export default function AboutHero() {
 
         <motion.div initial={{ clipPath: "inset(100% 0 0 0)" }} animate={{ clipPath: "inset(0 0 0 0)" }} transition={{ duration: 0.95, ease: [0.76, 0, 0.24, 1], delay: 0.18 }} className="relative mx-auto w-full max-w-[680px] lg:justify-self-end">
           <div className="relative aspect-[1.08/1] overflow-hidden rounded-tl-[6.5rem] rounded-tr-[2rem] rounded-br-[6.5rem] rounded-bl-[2rem] shadow-[0_34px_70px_rgba(15,76,69,0.2)] sm:aspect-[1.2/1] sm:rounded-tl-[8rem] sm:rounded-tr-[2.75rem] sm:rounded-br-[8rem] sm:rounded-bl-[2.75rem] lg:aspect-[1.12/1.04]">
-            <Image src="/images/about/about-image.jpg" alt="Sunlit seating area at Mannat Coworking" fill priority sizes="(max-width: 1024px) 90vw, 50vw" className="object-cover object-center" />
+            <Image src="/images/about/about-image.jpg" alt="Modern private office interior with desk seating and city views" fill priority sizes="(max-width: 1024px) 90vw, 50vw" className="object-cover object-center" />
             <div className="absolute inset-0 bg-[#0F4C45]/15" />
             <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0F4C45]/55 to-transparent" />
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.82, duration: 0.65 }} className="absolute bottom-5 left-5 max-w-[215px] border border-[#F8F7F2]/30 bg-[#F8F7F2]/95 px-4 py-3.5 shadow-[0_14px_30px_rgba(15,76,69,0.18)] backdrop-blur-sm sm:bottom-7 sm:left-7 sm:px-5 sm:py-4">

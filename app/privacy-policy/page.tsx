@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import { createPageMetadata } from "@/app/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Mannat Coworking",
-  description: "Privacy policy for Mannat Coworking.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Privacy Policy",
+  description:
+    "Read the Mannat Coworking privacy policy, including how we handle the information you share when you contact us or enquire about a workspace.",
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

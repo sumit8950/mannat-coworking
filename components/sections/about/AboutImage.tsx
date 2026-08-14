@@ -12,7 +12,7 @@ export default function AboutImage() {
 
         <Image
           src="/images/about/about-image.jpg"
-          alt="Premium Coworking Space"
+          alt="Modern private office interior with desk seating and city views"
           width={620}
           height={760}
           priority
