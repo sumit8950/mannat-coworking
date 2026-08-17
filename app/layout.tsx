@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Mannat Coworking | Premium Coworking Space in Sonipat",
+    default: "Mannat Coworking",
     template: "%s | Mannat Coworking",
   },
   description:
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "meeting rooms Sonipat",
     "flexible workspace Sonipat",
   ],
-  authors: [{ name: "Mannat Coworking", url: SITE_URL }],
+  authors: [{ name: "Home | Mannat Coworking", url: SITE_URL }],
   creator: "Mannat Coworking",
   publisher: "Mannat Coworking",
   alternates: {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "/",
     siteName: "Mannat Coworking",
-    title: "Mannat Coworking | Premium Coworking Space in Sonipat",
+    title: "Home | Mannat Coworking",
     description:
       "Premium coworking space in Sonipat with private cabins, workstations, meeting rooms, and flexible office spaces for entrepreneurs, startups, teams, and professionals.",
     images: [
