@@ -4,7 +4,7 @@ import type { Metadata } from "next";
  * The canonical production URL. Set NEXT_PUBLIC_SITE_URL in the deployment
  * environment if the production domain is different from this value.
  */
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://mannatcoworking.com").replace(/\/$/, "");
+export const SITE_URL = ( process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mannatcoworking.com").replace(/\/$/, "");
 
 export const siteUrl = new URL(SITE_URL);
 
