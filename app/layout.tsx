@@ -4,30 +4,46 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
+
   title: {
-    default: "Mannat Coworking",
-    template: "%s | Mannat Coworking",
+    default: "Mannat Coworking Space",
+    template: "%s | Mannat Coworking Space",
   },
+
   description:
-    "Mannat Coworking is a premium coworking space in Sonipat, Haryana, offering private cabins, workstations, meeting rooms, and flexible office spaces for entrepreneurs, startups, teams, and professionals.",
-  applicationName: "Mannat Coworking",
+    "Mannat Coworking Space is a premium coworking space in Sonipat, Haryana, offering private cabins, workstations, meeting rooms, and flexible office spaces for entrepreneurs, startups, teams, and professionals.",
+
+  applicationName: "Mannat Coworking Space",
+
   keywords: [
+    "Mannat Coworking Space",
     "coworking space in Sonipat",
     "coworking space Sonipat",
     "office space in Sonipat",
     "private office Sonipat",
     "meeting rooms Sonipat",
     "flexible workspace Sonipat",
+    "premium coworking space Sonipat",
   ],
-  authors: [{ name: "Home | Mannat Coworking", url: SITE_URL }],
+
+  authors: [
+    {
+      name: "Mannat Coworking",
+      url: SITE_URL,
+    },
+  ],
+
   creator: "Mannat Coworking",
   publisher: "Mannat Coworking",
+
   alternates: {
     canonical: "/",
   },
+
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -36,28 +52,36 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "/",
-    siteName: "Mannat Coworking",
-    title: "Home | Mannat Coworking",
+    siteName: "Mannat Coworking Space",
+
+    title: "Mannat Coworking Space | Sonipat",
+
     description:
       "Premium coworking space in Sonipat with private cabins, workstations, meeting rooms, and flexible office spaces for entrepreneurs, startups, teams, and professionals.",
+
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Mannat Coworking, premium workspace in Sonipat",
+        alt: "Mannat Coworking Space, premium workspace in Sonipat",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Mannat Coworking | Premium Coworking Space in Sonipat",
+
+    title: "Mannat Coworking Space | Sonipat",
+
     description:
       "A thoughtfully designed coworking space for focused work, meaningful connections, and steady growth in Sonipat.",
+
     images: ["/images/og-image.jpg"],
   },
 };
@@ -65,12 +89,19 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Mannat Coworking",
+
+  name: "Mannat Coworking Space",
+
   url: SITE_URL,
+
   logo: `${SITE_URL}/logo/mannat-logo.svg`,
+
   image: `${SITE_URL}/images/og-image.jpg`,
+
   telephone: "+919996169001",
+
   email: "mannatcoworking@gmail.com",
+
   address: {
     "@type": "PostalAddress",
     streetAddress: "S1, Second Floor, Atlas Rd, Parshuram Chowk",
@@ -79,6 +110,7 @@ const localBusinessSchema = {
     postalCode: "131001",
     addressCountry: "IN",
   },
+
   sameAs: [
     "https://www.instagram.com/mannatcoworking",
     "https://www.facebook.com/share/19CqEt7YKf/",
@@ -87,7 +119,9 @@ const localBusinessSchema = {
   ],
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: LayoutProps<"/">) {
   return (
     <html
       lang="en"
@@ -95,6 +129,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         {children}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
