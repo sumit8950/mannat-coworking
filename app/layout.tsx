@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { SITE_URL, siteUrl } from "@/app/seo";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: siteUrl,
@@ -129,6 +130,19 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {children}
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-VMRV6WNY75"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+  {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VMRV6WNY75');
+  `}
+</Script>
 
         <script
           type="application/ld+json"
