@@ -7,6 +7,7 @@ import {
   UsersRound,
   Presentation,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const workspaces = [
   {
@@ -63,6 +64,17 @@ const card = {
 };
 
 export default function WorkspaceOptions() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Automatic card highlight
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((current) => (current + 1) % workspaces.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="overflow-hidden bg-[#F8F6F1] px-4 py-6 sm:px-10 sm:py-10 lg:px-12 lg:py-12">
       <div className="mx-auto max-w-7xl">
@@ -104,8 +116,9 @@ export default function WorkspaceOptions() {
           viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 gap-4 min-[420px]:grid-cols-2 lg:grid-cols-4"
         >
-          {workspaces.map((workspace) => {
+          {workspaces.map((workspace, index) => {
             const Icon = workspace.icon;
+            const isActive = activeIndex === index;
 
             return (
               <motion.article
@@ -117,15 +130,30 @@ export default function WorkspaceOptions() {
                     duration: 0.3,
                   },
                 }}
-                className="group relative overflow-hidden rounded-[22px] border border-[#0F4C45]/10 bg-[#FBFAF6] px-5 py-6 shadow-[0_8px_25px_rgba(15,76,69,0.045)] transition-all duration-500 ease-out hover:border-[#0F4C45] hover:bg-[#0F4C45] hover:shadow-[0_20px_45px_rgba(15,76,69,0.18)]"
+                animate={{
+                  backgroundColor: isActive ? "#0F4C45" : "#FBFAF6",
+                  borderColor: isActive ? "#0F4C45" : "rgba(15,76,69,0.10)",
+                  boxShadow: isActive
+                    ? "0 20px 45px rgba(15,76,69,0.18)"
+                    : "0 8px 25px rgba(15,76,69,0.045)",
+                }}
+                transition={{
+                  duration: 0.7,
+                  ease: "easeInOut",
+                }}
+                className="group relative overflow-hidden rounded-[22px] border px-5 py-6"
               >
 
                 {/* GREEN ANIMATION LAYER */}
                 <motion.div
-                  initial={{ scale: 0 }}
-                  whileHover={{ scale: 1 }}
+                  initial={false}
+                  animate={{
+                    scale: isActive ? 1 : 0,
+                    opacity: isActive ? 1 : 0,
+                  }}
                   transition={{
-                    duration: 0.5,
+                    duration: 0.7,
+                    ease: "easeInOut",
                   }}
                   className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[#145E55]"
                 />
@@ -151,30 +179,74 @@ export default function WorkspaceOptions() {
                       scale: 1.1,
                     }}
                     transition={{ duration: 0.25 }}
-                    className="flex h-9 w-9 items-center justify-center rounded-full bg-[#0F4C45]/[0.07] text-[#0F4C45] transition-all duration-500 group-hover:bg-[#F8F6F1]/10 group-hover:text-[#F8F6F1]"
+                    animate={{
+                      backgroundColor: isActive
+                        ? "rgba(248,246,241,0.10)"
+                        : "rgba(15,76,69,0.07)",
+                      color: isActive ? "#F8F6F1" : "#0F4C45",
+                    }}
+                    className="flex h-9 w-9 items-center justify-center rounded-full"
                   >
                     <Icon size={17} strokeWidth={1.6} />
                   </motion.div>
                 </div>
 
                 {/* TITLE */}
-                <h3 className="relative z-10 mt-5 font-serif text-[1.65rem] leading-[1] tracking-[-0.035em] text-[#1A1A1A] transition-colors duration-500 group-hover:text-[#F8F6F1]">
+                <motion.h3
+                  animate={{
+                    color: isActive ? "#F8F6F1" : "#1A1A1A",
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  className="relative z-10 mt-5 font-serif text-[1.65rem] leading-[1] tracking-[-0.035em]"
+                >
                   {workspace.title}
-                </h3>
+                </motion.h3>
 
                 {/* DESCRIPTION */}
-                <p className="relative z-10 mt-4 text-[12px] leading-5 text-[#6A6F72] transition-colors duration-500 group-hover:text-[#F8F6F1]/75">
+                <motion.p
+                  animate={{
+                    color: isActive
+                      ? "rgba(248,246,241,0.75)"
+                      : "#6A6F72",
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  className="relative z-10 mt-4 text-[12px] leading-5"
+                >
                   {workspace.description}
-                </p>
+                </motion.p>
 
                 {/* BOTTOM DETAIL */}
-                <div className="relative z-10 mt-6 flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-[#0F4C45]/55 transition-colors duration-500 group-hover:text-[#C8A96A]">
+                <motion.div
+                  animate={{
+                    color: isActive
+                      ? "#C8A96A"
+                      : "rgba(15,76,69,0.55)",
+                  }}
+                  transition={{
+                    duration: 0.5,
+                  }}
+                  className="relative z-10 mt-6 flex items-center gap-2 text-[9px] font-semibold uppercase tracking-[0.18em]"
+                >
                   <span className="h-1 w-1 rounded-full bg-[#C8A96A]" />
                   Mannat Coworking
-                </div>
+                </motion.div>
 
-                {/* HOVER GLOW */}
-                <div className="pointer-events-none absolute -bottom-16 -left-16 h-32 w-32 rounded-full bg-[#C8A96A]/[0.08] opacity-0 blur-2xl transition-all duration-700 group-hover:scale-150 group-hover:opacity-100" />
+                {/* HOVER / ACTIVE GLOW */}
+                <motion.div
+                  initial={false}
+                  animate={{
+                    scale: isActive ? 1.5 : 1,
+                    opacity: isActive ? 1 : 0,
+                  }}
+                  transition={{
+                    duration: 0.7,
+                  }}
+                  className="pointer-events-none absolute -bottom-16 -left-16 h-32 w-32 rounded-full bg-[#C8A96A]/[0.08] blur-2xl"
+                />
 
               </motion.article>
             );
@@ -185,4 +257,3 @@ export default function WorkspaceOptions() {
     </section>
   );
 }
-

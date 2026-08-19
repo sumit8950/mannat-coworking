@@ -39,7 +39,7 @@ export default function HomeAbout() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => (current + 1) % images.length);
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
