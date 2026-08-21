@@ -1,27 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const audiences = [
   {
     number: "01",
     title: "Entrepreneurs",
-    description: "A focused space to build ideas, meet people, and move business forward.",
+    description:
+      "A focused space to build ideas, meet people, and move business forward.",
   },
   {
     number: "02",
     title: "Startups",
-    description: "Flexible workspaces designed for growing teams and ambitious ventures.",
+    description:
+      "Flexible workspaces designed for growing teams and ambitious ventures.",
   },
   {
     number: "03",
     title: "Freelancers",
-    description: "A professional environment that makes focused, independent work easier.",
+    description:
+      "A professional environment that makes focused, independent work easier.",
   },
   {
     number: "04",
     title: "Growing Teams",
-    description: "Comfortable spaces where teams can collaborate, connect, and grow together.",
+    description:
+      "Comfortable spaces where teams can collaborate, connect, and grow together.",
   },
 ];
 
@@ -49,10 +54,22 @@ const item = {
 };
 
 export default function WhoIsMannatFor() {
+  const [activeCard, setActiveCard] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+
+    const interval = setInterval(() => {
+      setActiveCard((prev) => (prev + 1) % audiences.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [paused]);
+
   return (
     <section className="overflow-hidden bg-[#F8F6F1] px-6 py-14 sm:px-10 sm:py-16 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-7xl">
-
         {/* HEADER */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
@@ -84,38 +101,71 @@ export default function WhoIsMannatFor() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
           className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-[#0F4C45]/10 bg-[#0F4C45]/10 sm:grid-cols-2 lg:grid-cols-4"
         >
-          {audiences.map((audience) => (
-            <motion.article
-              key={audience.number}
-              variants={item}
-              whileHover={{ y: -4 }}
-              className="group relative bg-[#FBFAF6] px-6 py-7 transition-all duration-500 hover:bg-[#0F4C45] sm:px-7"
-            >
-              {/* NUMBER */}
-              <div className="flex items-center justify-between">
-                <span className="text-[12px] font-semibold tracking-[0.18em] text-[#C8A96A]">
-                  {audience.number}
-                </span>
+          {audiences.map((audience, index) => {
+            const active = activeCard === index;
 
-                <span className="h-px w-8 bg-[#C8A96A]/50 transition-all duration-500 group-hover:w-12 group-hover:bg-[#C8A96A]" />
-              </div>
+            return (
+              <motion.article
+                key={audience.number}
+                variants={item}
+                whileHover={{ y: -4 }}
+                onClick={() => setActiveCard(index)}
+                className={`group relative cursor-pointer px-6 py-7 sm:px-7 transition-all duration-700 ${
+                  active
+                    ? "bg-[#0F4C45] scale-[1.02] shadow-2xl"
+                    : "bg-[#FBFAF6] hover:bg-[#0F4C45]"
+                }`}
+              >
+                {/* NUMBER */}
+                <div className="flex items-center justify-between">
+                  <span className="text-[12px] font-semibold tracking-[0.18em] text-[#C8A96A]">
+                    {audience.number}
+                  </span>
 
-              {/* TITLE */}
-              <h3 className="mt-8 font-serif text-2xl tracking-[-0.035em] text-[#1A1A1A] transition-colors duration-500 group-hover:text-[#F8F6F1]">
-                {audience.title}
-              </h3>
+                  <span
+                    className={`h-px transition-all duration-700 ${
+                      active
+                        ? "w-12 bg-[#C8A96A]"
+                        : "w-8 bg-[#C8A96A]/50 group-hover:w-12 group-hover:bg-[#C8A96A]"
+                    }`}
+                  />
+                </div>
 
-              {/* DESCRIPTION */}
-              <p className="mt-3 text-sm leading-6 text-[#5F6368] transition-colors duration-500 group-hover:text-[#F8F6F1]/70">
-                {audience.description}
-              </p>
+                {/* TITLE */}
+                <h3
+                  className={`mt-8 font-serif text-2xl tracking-[-0.035em] transition-colors duration-700 ${
+                    active
+                      ? "text-[#F8F6F1]"
+                      : "text-[#1A1A1A] group-hover:text-[#F8F6F1]"
+                  }`}
+                >
+                  {audience.title}
+                </h3>
 
-              {/* BOTTOM ACCENT */}
-              <div className="mt-7 h-px w-0 bg-[#C8A96A] transition-all duration-500 group-hover:w-full" />
-            </motion.article>
-          ))}
+                {/* DESCRIPTION */}
+                <p
+                  className={`mt-3 text-sm leading-6 transition-colors duration-700 ${
+                    active
+                      ? "text-[#F8F6F1]/70"
+                      : "text-[#5F6368] group-hover:text-[#F8F6F1]/70"
+                  }`}
+                >
+                  {audience.description}
+                </p>
+
+                {/* BOTTOM ACCENT */}
+                <div
+                  className={`mt-7 h-px bg-[#C8A96A] transition-all duration-700 ${
+                    active ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </motion.article>
+            );
+          })}
         </motion.div>
       </div>
     </section>
