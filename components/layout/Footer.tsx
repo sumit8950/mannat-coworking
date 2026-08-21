@@ -44,7 +44,7 @@ const linkClassName =
 export default function Footer() {
   return (
     <footer
-      className="mt-auto border-t border-[#0F4C45]/10 bg-[#F8F6F1] text-[#0F4C45]"
+      className="mt-auto border-t border-[#ce9f31] bg-[#F8F6F1] text-[#032521]"
       aria-label="Mannat Coworking footer"
     >
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 sm:grid-cols-2 sm:px-10 sm:py-14 xl:grid-cols-[1.6fr_repeat(4,1fr)] xl:gap-8 xl:px-12">
