@@ -21,7 +21,7 @@ const galleryItems = [
     description:
       "Professional spaces designed for productive conversations and team meetings.",
     alt: "Meeting room designed for focused team conversations",
-    src: "/images/gallery/meeting-rooms.png",
+    src: "/images/gallery/meetingrooms.png",
     className: "md:col-span-5",
   },
   {
@@ -39,7 +39,7 @@ const galleryItems = [
     description:
       "Open environments built for ideas, conversation, and meaningful collaboration.",
     alt: "Collaborative workspace with comfortable seating for team discussions",
-    src: "/images/gallery/collaborative-spaces.png",
+    src: "/images/gallery/collaborative-spaces.jpg",
     className: "md:col-span-5",
   },
   {
