@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 const images = [
   {
-    src: "/images/about/about-image.png",
+    src: "/images/about/about-image3.png",
     alt: "Modern private office interior with desk seating and city views",
   },
   {
@@ -15,7 +15,7 @@ const images = [
     alt: "Modern private office interior with desk seating and city views",
   },
   {
-    src: "/images/about/about-image3.png",
+    src: "/images/about/about-image.png",
     alt: "Modern private office interior with desk seating and city views",
   },
   {
