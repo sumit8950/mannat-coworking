@@ -11,7 +11,7 @@ export default function AboutImage() {
       <div className="group relative z-10 overflow-hidden rounded-[32px] shadow-[0_35px_70px_rgba(0,0,0,0.12)]">
 
         <Image
-          src="/images/about/about-image.jpg"
+          src="/images/about/about-imagee.jpg"
           alt="Modern private office interior with desk seating and city views"
           width={620}
           height={760}
