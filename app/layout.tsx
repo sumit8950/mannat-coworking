@@ -7,17 +7,18 @@ export const metadata: Metadata = {
   metadataBase: siteUrl,
 
   title: {
-    default: "Mannat Coworking Space",
-    template: "%s | Mannat Coworking Space",
+    default: "Mannat Coworking",
+    template: "%s | Mannat Coworking",
   },
 
   description:
     "Mannat Coworking Space is a premium coworking space in Sonipat, Haryana, offering private cabins, workstations, meeting rooms, and flexible office spaces for entrepreneurs, startups, teams, and professionals.",
 
-  applicationName: "Mannat Coworking Space",
+  applicationName: "Mannat Coworking",
 
   keywords: [
     "Mannat Coworking",
+    "coworking space near me",
     "mannat coworking",
     "coworking space in Sonipat",
     "coworking space Sonipat",
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Mannat Coworking",
 
-    title: "Mannat Coworking Space",
+    title: "Mannat Coworking",
 
     description:
       "Premium coworking space in Sonipat with private cabins, workstations, meeting rooms, and flexible office spaces for entrepreneurs, startups, teams, and professionals.",
@@ -78,7 +79,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Mannat Coworking Space",
+    title: "Mannat Coworking",
 
     description:
       "A thoughtfully designed coworking space for focused work, meaningful connections, and steady growth in Sonipat.",
