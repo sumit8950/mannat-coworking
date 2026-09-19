@@ -9,7 +9,7 @@ import type { Metadata } from "next";
 import { createPageMetadata } from "@/app/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Mannat Coworking",
+  title: "Mannat Coworking | Coworking Space in Sonipat.",
   description:
     "Discover Mannat Coworking, a premium coworking space in Sonipat with flexible workspaces, private offices, meeting rooms, and thoughtful amenities.",
   path: "/",
